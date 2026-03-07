@@ -1,14 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="uz">
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modern QR Code Generator</title>
-    <meta name="description" content="Generate high-quality custom QR codes for URLs, WiFi, Social Media, and more." />
-    <script type="module" crossorigin src="/assets/index-CbvNwPMA.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CJNzj0Am.css">
-  </head>
-  <body class="bg-gray-50 text-gray-900 font-sans antialiased min-h-screen">
+    <title>OsonQR - Bepul QR Kod Generatori | WiFi, URL, Telegram</title>
+    <meta name="description" content="OsonQR – O'zbek tilidagi bepul QR kod yaratish xizmati. URL, WiFi, Telegram, Instagram, SMS, Email, vCard uchun cheksiz va reklamsiz QR kod yarating. Tez. Bepul. Xavfsiz." />
+
+    <!-- Canonical & Hreflang -->
+    <link rel="canonical" href="https://osonqr.rahmatjonmatkarimov.uz/" />
+    <link rel="alternate" hreflang="uz" href="https://osonqr.rahmatjonmatkarimov.uz/" />
+    <link rel="alternate" hreflang="ru" href="https://osonqr.rahmatjonmatkarimov.uz/" />
+    <link rel="alternate" hreflang="en" href="https://osonqr.rahmatjonmatkarimov.uz/" />
+    <link rel="alternate" hreflang="x-default" href="https://osonqr.rahmatjonmatkarimov.uz/" />
+
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <!-- SEO Tags -->
+    <meta name="keywords" content="bepul qr kod generator, qr kod yaratish, wifi qr kod, url qr kod, telegram qr kod, instagram qr kod, sms qr kod, email qr kod, vcard qr kod, o'zbek qr kod, osonqr, qr code generator uzbek, бесплатный qr код генератор" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="author" content="OsonQR" />
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="6To8TRIETXOe0059jPoL8dVUAkfQTf1hiSCwaru1gi8" />
+
+    <!-- Open Graph (Facebook/LinkedIn etc) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="uz_UZ" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:title" content="OsonQR - Bepul QR Kod Generatori | WiFi, URL, Telegram" />
+    <meta property="og:description" content="OsonQR – O'zbek tilidagi bepul QR kod yaratish xizmati. URL, WiFi, Telegram, Instagram, SMS, Email uchun QR kod yarating. Tez. Bepul. Xavfsiz." />
+    <meta property="og:url" content="https://osonqr.rahmatjonmatkarimov.uz/" />
+    <meta property="og:image" content="https://osonqr.rahmatjonmatkarimov.uz/logo.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:site_name" content="OsonQR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OsonQR - Bepul QR Kod Generatori" />
+    <meta name="twitter:description" content="URL, WiFi, Telegram, Instagram va boshqalar uchun bepul QR kod yarating. Tez. Bepul. Xavfsiz." />
+    <meta name="twitter:image" content="https://osonqr.rahmatjonmatkarimov.uz/logo.png" />
+
+    <!-- Google Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "OsonQR",
+      "url": "https://osonqr.rahmatjonmatkarimov.uz/",
+      "description": "O'zbek tilidagi bepul QR kod yaratish xizmati. URL, WiFi, Telegram, Instagram, SMS, Email, vCard uchun QR kod yarating.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "inLanguage": ["uz", "ru", "en"],
+      "author": {
+        "@type": "Person",
+        "name": "Rahmatjon Matkarimov",
+        "url": "https://rahmatjonmatkarimov.uz"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "OsonQR",
+      "url": "https://osonqr.rahmatjonmatkarimov.uz/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://osonqr.rahmatjonmatkarimov.uz/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "SiteNavigationElement",
+          "position": 1,
+          "name": "URL QR Code",
+          "description": "Veb-saytlar uchun url havola QR kodini yaratish",
+          "url": "https://osonqr.rahmatjonmatkarimov.uz/qr-code-generator"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 2,
+          "name": "Text QR Code",
+          "description": "Matnli xabarlar uchun QR kod yaratish",
+          "url": "https://osonqr.rahmatjonmatkarimov.uz/text-qr-code-generator"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 3,
+          "name": "WiFi QR Code",
+          "description": "WiFi tarmoqlari uchun parolli QR kod yaratish",
+          "url": "https://osonqr.rahmatjonmatkarimov.uz/wifi-qr-code-generator"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 4,
+          "name": "Instagram QR Code",
+          "description": "Instagram profillari uchun QR kod yaratish",
+          "url": "https://osonqr.rahmatjonmatkarimov.uz/instagram-qr-code-generator"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 5,
+          "name": "Telegram QR Code",
+          "description": "Telegram kanal va guruhlar uchun QR kod yaratish",
+          "url": "https://osonqr.rahmatjonmatkarimov.uz/telegram-qr-code-generator"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 6,
+          "name": "Email QR Code",
+          "description": "Elektron pochta xabarlari uchun QR kod yaratish",
+          "url": "https://osonqr.rahmatjonmatkarimov.uz/email-qr-code-generator"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 7,
+          "name": "vCard QR Code",
+          "description": "Elektron vizitka (vCard) uchun QR kod yaratish",
+          "url": "https://osonqr.rahmatjonmatkarimov.uz/vcard-qr-code-generator"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 8,
+          "name": "SMS QR Code",
+          "description": "SMS xabarlar uchun QR kod yaratish",
+          "url": "https://osonqr.rahmatjonmatkarimov.uz/sms-qr-code-generator"
+        }
+      ]
+    }
+    </script>
+  <script type="module" crossorigin src="/assets/index-BHBqP8fz.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BqF7j-iv.css">
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans antialiased min-h-screen">
     <div id="app"></div>
-  </body>
+</body>
+
 </html>

@@ -3,7 +3,7 @@
     <div class="text-center mb-16 space-y-4">
       <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 leading-tight">
         {{ $t('home.titleText') }} <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600">{{
+          class="text-transparent bg-clip-text bg-linear-to-r from-brand-600 to-indigo-600">{{
             $t('home.titleGradient') }}</span> {{ $t('home.titleGenerator') }}
       </h1>
       <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -15,7 +15,7 @@
       <router-link v-for="tool in translatedTools" :key="tool.id" :to="tool.path"
         class="group flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-brand-200 hover:-translate-y-1 transition-all duration-300">
         <div
-          :class="['w-12 h-12 rounded-xl flex items-center justify-center text-white shadow-inner flex-shrink-0', tool.color]">
+          :class="['w-12 h-12 rounded-xl flex items-center justify-center text-white shadow-inner shrink-0', tool.color]">
           <component :is="tool.icon" class="w-6 h-6" />
         </div>
         <div>
@@ -42,6 +42,38 @@
         </div>
       </div>
     </div>
+
+    <!-- SEO Content Section -->
+    <section class="mt-24 border-t border-gray-100 pt-16 max-w-4xl mx-auto space-y-16">
+      <!-- About OsonQR -->
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-gray-900">{{ $t('home.seoAboutTitle') }}</h2>
+        <p class="text-gray-600 leading-relaxed">{{ $t('home.seoAboutText') }}</p>
+      </div>
+
+      <!-- How to use -->
+      <div class="space-y-6">
+        <h2 class="text-2xl font-bold text-gray-900">{{ $t('home.seoHowTitle') }}</h2>
+        <ol class="space-y-4">
+          <li v-for="(step, i) in howSteps" :key="i" class="flex gap-4 items-start">
+            <span class="shrink-0 w-8 h-8 rounded-full bg-brand-600 text-white text-sm font-bold flex items-center justify-center">{{ i + 1 }}</span>
+            <p class="text-gray-600 pt-1 leading-relaxed">{{ step }}</p>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Types of QR codes -->
+      <div class="space-y-4">
+        <h2 class="text-2xl font-bold text-gray-900">{{ $t('home.seoTypesTitle') }}</h2>
+        <p class="text-gray-600 leading-relaxed">{{ $t('home.seoTypesText') }}</p>
+      </div>
+
+      <!-- Privacy note -->
+      <div class="bg-emerald-50 border border-emerald-100 rounded-2xl p-6 space-y-2">
+        <h2 class="text-lg font-bold text-emerald-800">{{ $t('home.seoPrivacyTitle') }}</h2>
+        <p class="text-emerald-700 text-sm leading-relaxed">{{ $t('home.seoPrivacyText') }}</p>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -54,13 +86,21 @@ import { LinkIcon, DocumentTextIcon, WifiIcon, SignalIcon, PhoneIcon, EnvelopeIc
 const { t } = useI18n()
 
 useHead({
-  title: computed(() => `${t('home.titleText')} ${t('home.titleGradient')} - Free Online Tool`),
+  title: computed(() => `${t('home.titleText')} ${t('home.titleGradient')} ${t('home.titleGenerator')} - OsonQR`),
   meta: [
     { name: 'description', content: computed(() => t('home.subtitle')) },
-    { property: 'og:title', content: computed(() => `${t('home.titleText')} ${t('home.titleGradient')} - Free Online Tool`) },
+    { name: 'keywords', content: computed(() => t('home.metaKeywords')) },
+    { property: 'og:title', content: computed(() => `OsonQR - ${t('home.titleText')} ${t('home.titleGradient')}`) },
     { property: 'og:description', content: computed(() => t('home.subtitle')) }
   ]
 })
+
+const howSteps = computed(() => [
+  t('home.seoStep1'),
+  t('home.seoStep2'),
+  t('home.seoStep3'),
+  t('home.seoStep4'),
+])
 
 const translatedTools = computed(() => [
   { id: 'url', name: t('tools.url.name'), path: '/qr-code-generator', description: t('tools.url.desc'), icon: LinkIcon, color: 'bg-blue-500' },
