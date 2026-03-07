@@ -33,6 +33,124 @@
           </div>
         </div>
 
+        <h3 class="text-lg font-bold mb-4 mt-8">{{ $t('generator.shapesTitle') }}</h3>
+        <div class="space-y-6">
+          <!-- Body Shape -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">{{ $t('generator.bodyShape') }}</label>
+            <div class="flex flex-wrap gap-2">
+              <button v-for="shape in ['square', 'dots', 'rounded', 'extra-rounded', 'classy', 'classy-rounded']"
+                :key="shape" @click="qrState.shapes.body = shape"
+                class="w-12 h-12 rounded-lg border-2 flex items-center justify-center bg-white transition-all hover:bg-gray-50 hover:border-brand-300"
+                :class="qrState.shapes.body === shape ? 'border-brand-500 shadow-sm ring-1 ring-brand-500' : 'border-gray-200'"
+                :title="$t('generator.shapes.' + shape.replace('-', ''))">
+                <svg viewBox="0 0 24 24" width="24" height="24" class="fill-current text-gray-800">
+                  <path v-if="shape === 'square'"
+                    d="M2.5 2.5h5v5h-5zM10 2.5h5v5h-5zM17.5 2.5h5v5h-5zM2.5 10h5v5h-5zM10 10h5v5h-5zM17.5 10h5v5h-5zM2.5 17.5h5v5h-5zM10 17.5h5v5h-5zM17.5 17.5h5v5h-5z" />
+                  <template v-else-if="shape === 'dots'">
+                    <circle cx="5" cy="5" r="2.5" />
+                    <circle cx="12.5" cy="5" r="2.5" />
+                    <circle cx="20" cy="5" r="2.5" />
+                    <circle cx="5" cy="12.5" r="2.5" />
+                    <circle cx="12.5" cy="12.5" r="2.5" />
+                    <circle cx="20" cy="12.5" r="2.5" />
+                    <circle cx="5" cy="20" r="2.5" />
+                    <circle cx="12.5" cy="20" r="2.5" />
+                    <circle cx="20" cy="20" r="2.5" />
+                  </template>
+                  <template v-else-if="shape === 'rounded'">
+                    <rect x="2.5" y="2.5" width="5" height="5" rx="1.5" />
+                    <rect x="10" y="2.5" width="5" height="5" rx="1.5" />
+                    <rect x="17.5" y="2.5" width="5" height="5" rx="1.5" />
+                    <rect x="2.5" y="10" width="5" height="5" rx="1.5" />
+                    <rect x="10" y="10" width="5" height="5" rx="1.5" />
+                    <rect x="17.5" y="10" width="5" height="5" rx="1.5" />
+                    <rect x="2.5" y="17.5" width="5" height="5" rx="1.5" />
+                    <rect x="10" y="17.5" width="5" height="5" rx="1.5" />
+                    <rect x="17.5" y="17.5" width="5" height="5" rx="1.5" />
+                  </template>
+                  <template v-else-if="shape === 'extra-rounded'">
+                    <rect x="2.5" y="2.5" width="5" height="5" rx="2.5" />
+                    <rect x="10" y="2.5" width="5" height="5" rx="2.5" />
+                    <rect x="17.5" y="2.5" width="5" height="5" rx="2.5" />
+                    <rect x="2.5" y="10" width="5" height="5" rx="2.5" />
+                    <rect x="10" y="10" width="5" height="5" rx="2.5" />
+                    <rect x="17.5" y="10" width="5" height="5" rx="2.5" />
+                    <rect x="2.5" y="17.5" width="5" height="5" rx="2.5" />
+                    <rect x="10" y="17.5" width="5" height="5" rx="2.5" />
+                    <rect x="17.5" y="17.5" width="5" height="5" rx="2.5" />
+                  </template>
+                  <template v-else-if="shape === 'classy'">
+                    <path d="M2.5 2.5h5v5h-5zM17.5 2.5h5v5h-5zM2.5 17.5h5v5h-5z" />
+                    <rect x="10" y="2.5" width="5" height="5" rx="2.5" />
+                    <rect x="10" y="10" width="5" height="5" rx="2.5" />
+                    <rect x="17.5" y="10" width="5" height="5" rx="2.5" />
+                    <rect x="10" y="17.5" width="5" height="5" rx="2.5" />
+                    <rect x="17.5" y="17.5" width="5" height="5" rx="2.5" />
+                    <rect x="2.5" y="10" width="5" height="5" rx="2.5" />
+                  </template>
+                  <template v-else-if="shape === 'classy-rounded'">
+                    <rect x="2.5" y="2.5" width="5" height="5" rx="1.5" />
+                    <rect x="17.5" y="2.5" width="5" height="5" rx="1.5" />
+                    <rect x="2.5" y="17.5" width="5" height="5" rx="1.5" />
+                    <rect x="10" y="2.5" width="5" height="5" rx="2.5" />
+                    <rect x="10" y="10" width="5" height="5" rx="2.5" />
+                    <rect x="17.5" y="10" width="5" height="5" rx="2.5" />
+                    <rect x="10" y="17.5" width="5" height="5" rx="2.5" />
+                    <rect x="17.5" y="17.5" width="5" height="5" rx="2.5" />
+                    <rect x="2.5" y="10" width="5" height="5" rx="2.5" />
+                  </template>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Eye Frame Shape -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">{{ $t('generator.eyeFrameShape') }}</label>
+            <div class="flex flex-wrap gap-2">
+              <button v-for="shape in ['square', 'dot', 'rounded', 'extra-rounded', 'classy', 'classy-rounded']"
+                :key="shape" @click="qrState.shapes.eyeFrame = shape"
+                class="w-12 h-12 rounded-lg border-2 flex items-center justify-center bg-white transition-all hover:bg-gray-50 hover:border-brand-300"
+                :class="qrState.shapes.eyeFrame === shape ? 'border-brand-500 shadow-sm ring-1 ring-brand-500' : 'border-gray-200'"
+                :title="$t('generator.shapes.' + shape.replace('-', ''))">
+                <svg viewBox="0 0 24 24" width="28" height="28" class="fill-none stroke-current text-gray-800"
+                  stroke-width="3">
+                  <rect v-if="shape === 'square'" x="3" y="3" width="18" height="18" />
+                  <circle v-else-if="shape === 'dot'" cx="12" cy="12" r="9" />
+                  <rect v-else-if="shape === 'rounded'" x="3" y="3" width="18" height="18" rx="3" />
+                  <rect v-else-if="shape === 'extra-rounded'" x="3" y="3" width="18" height="18" rx="6" />
+                  <path v-else-if="shape === 'classy'"
+                    d="M3 9V6a3 3 0 0 1 3-3h3M15 3h3a3 3 0 0 1 3 3v3M21 15v3a3 3 0 0 1-3 3h-3M9 21H6a3 3 0 0 1-3-3v-3" />
+                  <path v-else-if="shape === 'classy-rounded'"
+                    d="M3 12v-4a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H3z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Eye Ball Shape -->
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">{{ $t('generator.eyeBallShape') }}</label>
+            <div class="flex flex-wrap gap-2">
+              <button v-for="shape in ['square', 'dot', 'rounded', 'extra-rounded', 'classy', 'classy-rounded']"
+                :key="shape" @click="qrState.shapes.eyeBall = shape"
+                class="w-12 h-12 rounded-lg border-2 flex items-center justify-center bg-white transition-all hover:bg-gray-50 hover:border-brand-300"
+                :class="qrState.shapes.eyeBall === shape ? 'border-brand-500 shadow-sm ring-1 ring-brand-500' : 'border-gray-200'"
+                :title="$t('generator.shapes.' + shape.replace('-', ''))">
+                <svg viewBox="0 0 24 24" width="28" height="28" class="fill-current text-gray-800">
+                  <rect v-if="shape === 'square'" x="6" y="6" width="12" height="12" />
+                  <circle v-else-if="shape === 'dot'" cx="12" cy="12" r="6" />
+                  <rect v-else-if="shape === 'rounded'" x="6" y="6" width="12" height="12" rx="2" />
+                  <rect v-else-if="shape === 'extra-rounded'" x="6" y="6" width="12" height="12" rx="4" />
+                  <path v-else-if="shape === 'classy'" d="M6 9a3 3 0 0 1 3-3h9v12H6z" />
+                  <path v-else-if="shape === 'classy-rounded'" d="M6 10a4 4 0 0 1 4-4h8v8a4 4 0 0 1-4 4H6z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
         <div class="mt-4">
           <label class="block text-sm font-medium text-gray-700 mb-2">{{ $t('generator.logoUrl') }}</label>
           <div class="flex flex-col gap-3">

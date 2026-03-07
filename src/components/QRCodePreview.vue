@@ -37,7 +37,15 @@ const createQrCode = () => {
     image: qrState.logoUrl || null,
     dotsOptions: {
       color: qrState.colors.dark,
-      type: "rounded"
+      type: qrState.shapes?.body || "rounded"
+    },
+    cornersSquareOptions: {
+      color: qrState.colors.dark,
+      type: qrState.shapes?.eyeFrame || "extra-rounded"
+    },
+    cornersDotOptions: {
+      color: qrState.colors.dark,
+      type: qrState.shapes?.eyeBall || "dot"
     },
     backgroundOptions: {
       color: qrState.colors.light,
@@ -65,7 +73,16 @@ watch(() => qrState, () => {
         data: qrState.data || 'https://example.com',
         image: qrState.logoUrl || null,
         dotsOptions: {
-          color: qrState.colors.dark
+          color: qrState.colors.dark,
+          type: qrState.shapes?.body || "rounded"
+        },
+        cornersSquareOptions: {
+          color: qrState.colors.dark,
+          type: qrState.shapes?.eyeFrame || "extra-rounded"
+        },
+        cornersDotOptions: {
+          color: qrState.colors.dark,
+          type: qrState.shapes?.eyeBall || "dot"
         },
         backgroundOptions: {
           color: qrState.colors.light
