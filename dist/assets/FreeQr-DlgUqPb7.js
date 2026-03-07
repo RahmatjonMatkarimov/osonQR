@@ -1,0 +1,1 @@
+import{_ as r}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{c as n,o}from"./vue-vendor-ClBwdyUK.js";import"./vendor-CZdDCJRP.js";const t={},c=["innerHTML"];function s(e,i){return o(),n("div",{innerHTML:e.$t("info.freeQrContent")},null,8,c)}const m=r(t,[["render",s]]);export{m as default};

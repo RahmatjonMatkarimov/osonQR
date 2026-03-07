@@ -56,7 +56,9 @@
         <h2 class="text-2xl font-bold text-gray-900">{{ $t('home.seoHowTitle') }}</h2>
         <ol class="space-y-4">
           <li v-for="(step, i) in howSteps" :key="i" class="flex gap-4 items-start">
-            <span class="shrink-0 w-8 h-8 rounded-full bg-brand-600 text-white text-sm font-bold flex items-center justify-center">{{ i + 1 }}</span>
+            <span
+              class="shrink-0 w-8 h-8 rounded-full bg-brand-600 text-white text-sm font-bold flex items-center justify-center">{{
+              i + 1 }}</span>
             <p class="text-gray-600 pt-1 leading-relaxed">{{ step }}</p>
           </li>
         </ol>
@@ -81,7 +83,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useHead } from '@vueuse/head'
-import { LinkIcon, DocumentTextIcon, WifiIcon, SignalIcon, PhoneIcon, EnvelopeIcon, IdentificationIcon, ChatBubbleBottomCenterTextIcon } from '@heroicons/vue/24/outline'
+import { LinkIcon, DocumentTextIcon, WifiIcon, SignalIcon, PhoneIcon, EnvelopeIcon, IdentificationIcon, ChatBubbleBottomCenterTextIcon, PhoneArrowUpRightIcon, MapPinIcon, DocumentIcon, PhotoIcon, VideoCameraIcon, ArrowDownTrayIcon } from '@heroicons/vue/24/outline'
 
 const { t } = useI18n()
 
@@ -108,8 +110,20 @@ const translatedTools = computed(() => [
   { id: 'wifi', name: t('tools.wifi.name'), path: '/wifi-qr-code-generator', description: t('tools.wifi.desc'), icon: WifiIcon, color: 'bg-emerald-500' },
   { id: 'instagram', name: t('tools.instagram.name'), path: '/instagram-qr-code-generator', description: t('tools.instagram.desc'), icon: SignalIcon, color: 'bg-pink-500' },
   { id: 'telegram', name: t('tools.telegram.name'), path: '/telegram-qr-code-generator', description: t('tools.telegram.desc'), icon: PhoneIcon, color: 'bg-cyan-500' },
+  { id: 'whatsapp', name: t('tools.whatsapp.name'), path: '/whatsapp-qr-code-generator', description: t('tools.whatsapp.desc'), icon: ChatBubbleBottomCenterTextIcon, color: 'bg-green-600' },
+  { id: 'facebook', name: t('tools.facebook.name'), path: '/facebook-qr-code-generator', description: t('tools.facebook.desc'), icon: LinkIcon, color: 'bg-blue-700' },
+  { id: 'youtube', name: t('tools.youtube.name'), path: '/youtube-qr-code-generator', description: t('tools.youtube.desc'), icon: VideoCameraIcon, color: 'bg-red-600' },
+  { id: 'tiktok', name: t('tools.tiktok.name'), path: '/tiktok-qr-code-generator', description: t('tools.tiktok.desc'), icon: SignalIcon, color: 'bg-black' },
+  { id: 'linkedin', name: t('tools.linkedin.name'), path: '/linkedin-qr-code-generator', description: t('tools.linkedin.desc'), icon: IdentificationIcon, color: 'bg-blue-800' },
+  { id: 'discord', name: t('tools.discord.name'), path: '/discord-qr-code-generator', description: t('tools.discord.desc'), icon: ChatBubbleBottomCenterTextIcon, color: 'bg-indigo-600' },
   { id: 'email', name: t('tools.email.name'), path: '/email-qr-code-generator', description: t('tools.email.desc'), icon: EnvelopeIcon, color: 'bg-amber-500' },
   { id: 'vcard', name: t('tools.vcard.name'), path: '/vcard-qr-code-generator', description: t('tools.vcard.desc'), icon: IdentificationIcon, color: 'bg-indigo-500' },
   { id: 'sms', name: t('tools.sms.name'), path: '/sms-qr-code-generator', description: t('tools.sms.desc'), icon: ChatBubbleBottomCenterTextIcon, color: 'bg-green-500' },
+  { id: 'phone', name: t('tools.phone.name'), path: '/phone-qr-code-generator', description: t('tools.phone.desc'), icon: PhoneArrowUpRightIcon, color: 'bg-orange-500' },
+  { id: 'location', name: t('tools.location.name'), path: '/location-qr-code-generator', description: t('tools.location.desc'), icon: MapPinIcon, color: 'bg-red-500' },
+  { id: 'pdf', name: t('tools.pdf.name'), path: '/pdf-qr-code-generator', description: t('tools.pdf.desc'), icon: DocumentIcon, color: 'bg-rose-600' },
+  { id: 'image', name: t('tools.image.name'), path: '/image-qr-code-generator', description: t('tools.image.desc'), icon: PhotoIcon, color: 'bg-purple-500' },
+  { id: 'video', name: t('tools.video.name'), path: '/video-qr-code-generator', description: t('tools.video.desc'), icon: VideoCameraIcon, color: 'bg-indigo-700' },
+  { id: 'file-download', name: t('tools.file-download.name'), path: '/file-download-qr-code-generator', description: t('tools.file-download.desc'), icon: ArrowDownTrayIcon, color: 'bg-gray-800' },
 ])
 </script>
