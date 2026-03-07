@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://osonqr.rahmatjonmatkarimov.uz/sitemap.xml
+Sitemap: https://osonqr.rahmatjonmatkarimov.uz/sitemap.xml
