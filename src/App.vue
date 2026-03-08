@@ -178,6 +178,12 @@ useHead({
   meta: [
     { name: 'author', content: 'OsonQR' },
     { property: 'og:locale', content: computed(() => locale.value === 'uz' ? 'uz_UZ' : locale.value === 'ru' ? 'ru_RU' : 'en_US') }
+  ],
+  link: [
+    { rel: 'alternate', hreflang: 'uz', href: 'https://osonqr.rahmatjonmatkarimov.uz/' },
+    { rel: 'alternate', hreflang: 'ru', href: 'https://osonqr.rahmatjonmatkarimov.uz/' },
+    { rel: 'alternate', hreflang: 'en', href: 'https://osonqr.rahmatjonmatkarimov.uz/' },
+    { rel: 'alternate', hreflang: 'x-default', href: 'https://osonqr.rahmatjonmatkarimov.uz/' }
   ]
 })
 
