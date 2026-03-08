@@ -1,13 +1,13 @@
 <template>
   <div class="flex flex-col items-center justify-center w-full">
     <div
-      class="bg-white p-6 rounded-2xl shadow-md w-full max-w-[350px] aspect-square flex items-center justify-center relative shadow-brand-100"
+      class="bg-white sm:p-6 rounded-2xl shadow-md w-full max-w-[350px] aspect-square flex items-center justify-center relative shadow-brand-100"
       ref="qrContainer">
       <!-- QR code will be appended here -->
     </div>
 
     <!-- Download Buttons -->
-    <div class="mt-8 flex gap-4 w-full">
+    <div class="mt-8 p-4 sm:p-6 flex gap-4 w-full">
       <button @click="download('png')"
         class="flex-1 bg-brand-600 text-white font-medium py-3 px-4 rounded-xl hover:bg-brand-700 transition-colors shadow-sm focus:ring-4 focus:ring-brand-100 flex items-center justify-center gap-2">
         <ArrowDownTrayIcon class="w-5 h-5" /> {{ $t('generator.download.png') }}

@@ -166,7 +166,7 @@
 
       <!-- Right: Preview and Download -->
       <div
-        class="bg-gray-100 sm:flex hidden rounded-3xl p-6 lg:sticky lg:top-24 order-1 lg:order-2  flex-col items-center shadow-inner">
+        class="bg-gray-100 rounded-3xl py-6 sm:px-6 lg:sticky lg:top-24 order-1 lg:order-2 flex flex-col items-center shadow-inner">
         <QRCodePreview />
       </div>
     </div>
