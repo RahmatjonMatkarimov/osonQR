@@ -94,6 +94,9 @@ useHead({
     { name: 'keywords', content: computed(() => t('home.metaKeywords')) },
     { property: 'og:title', content: computed(() => `OsonQR - ${t('home.titleText')} ${t('home.titleGradient')}`) },
     { property: 'og:description', content: computed(() => t('home.subtitle')) }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://osonqr.rahmatjonmatkarimov.uz/' }
   ]
 })
 

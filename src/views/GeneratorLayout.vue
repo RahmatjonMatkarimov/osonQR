@@ -280,6 +280,32 @@ useHead({
     { name: 'description', content: computed(() => seoData.value?.description || '') },
     { property: 'og:title', content: computed(() => seoData.value?.title || '') },
     { property: 'og:description', content: computed(() => seoData.value?.description || '') }
+  ],
+  link: [
+    { rel: 'canonical', href: computed(() => `https://osonqr.rahmatjonmatkarimov.uz${route.path}`) }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: computed(() => JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": t('home.titleText'),
+            "item": "https://osonqr.rahmatjonmatkarimov.uz/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": currentToolName.value,
+            "item": `https://osonqr.rahmatjonmatkarimov.uz${route.path}`
+          }
+        ]
+      }))
+    }
   ]
 })
 

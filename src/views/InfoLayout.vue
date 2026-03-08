@@ -25,7 +25,7 @@
                 <ul class="space-y-2 text-sm text-gray-600">
                     <li v-for="link in otherLinks" :key="link.path">
                         <router-link :to="link.path" class="hover:underline hover:text-brand-600">{{ link.name
-                        }}</router-link>
+                            }}</router-link>
                     </li>
                 </ul>
             </div>
@@ -36,8 +36,40 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useHead } from '@vueuse/head'
+import { useRoute } from 'vue-router'
 
 const { t } = useI18n()
+const route = useRoute()
+
+useHead({
+    link: [
+        { rel: 'canonical', href: computed(() => `https://osonqr.rahmatjonmatkarimov.uz${route.path}`) }
+    ],
+    script: [
+        {
+            type: 'application/ld+json',
+            children: computed(() => JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": t('home.titleText'),
+                        "item": "https://osonqr.rahmatjonmatkarimov.uz/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": t('info.titleSuffix') || "Ma'lumot",
+                        "item": `https://osonqr.rahmatjonmatkarimov.uz${route.path}`
+                    }
+                ]
+            }))
+        }
+    ]
+})
 
 const otherLinks = computed(() => {
     return [
