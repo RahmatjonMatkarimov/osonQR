@@ -58,7 +58,7 @@
           <li v-for="(step, i) in howSteps" :key="i" class="flex gap-4 items-start">
             <span
               class="shrink-0 w-8 h-8 rounded-full bg-brand-600 text-white text-sm font-bold flex items-center justify-center">{{
-              i + 1 }}</span>
+                i + 1 }}</span>
             <p class="text-gray-600 pt-1 leading-relaxed">{{ step }}</p>
           </li>
         </ol>
@@ -83,7 +83,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useHead } from '@vueuse/head'
-import { LinkIcon, DocumentTextIcon, WifiIcon, SignalIcon, PhoneIcon, EnvelopeIcon, IdentificationIcon, ChatBubbleBottomCenterTextIcon, PhoneArrowUpRightIcon, MapPinIcon, DocumentIcon, PhotoIcon, VideoCameraIcon, ArrowDownTrayIcon } from '@heroicons/vue/24/outline'
+import { LinkIcon, DocumentTextIcon, WifiIcon, SignalIcon, PhoneIcon, EnvelopeIcon, IdentificationIcon, ChatBubbleBottomCenterTextIcon, PhoneArrowUpRightIcon, MapPinIcon, DocumentIcon, PhotoIcon, VideoCameraIcon, ArrowDownTrayIcon, HashtagIcon, BookmarkIcon, CameraIcon, ArrowDownOnSquareIcon, PlayIcon, CurrencyDollarIcon, ShieldCheckIcon, CalendarIcon, MusicalNoteIcon, StarIcon, TvIcon, ChatBubbleLeftRightIcon, ChatBubbleLeftIcon, CreditCardIcon } from '@heroicons/vue/24/outline'
 
 const { t } = useI18n()
 
@@ -125,5 +125,19 @@ const translatedTools = computed(() => [
   { id: 'image', name: t('tools.image.name'), path: '/image-qr-code-generator', description: t('tools.image.desc'), icon: PhotoIcon, color: 'bg-purple-500' },
   { id: 'video', name: t('tools.video.name'), path: '/video-qr-code-generator', description: t('tools.video.desc'), icon: VideoCameraIcon, color: 'bg-indigo-700' },
   { id: 'file-download', name: t('tools.file-download.name'), path: '/file-download-qr-code-generator', description: t('tools.file-download.desc'), icon: ArrowDownTrayIcon, color: 'bg-gray-800' },
+  { id: 'twitter', name: t('tools.twitter.name'), path: '/twitter-qr-code-generator', description: t('tools.twitter.desc'), icon: HashtagIcon, color: 'bg-sky-400' },
+  { id: 'pinterest', name: t('tools.pinterest.name'), path: '/pinterest-qr-code-generator', description: t('tools.pinterest.desc'), icon: BookmarkIcon, color: 'bg-red-700' },
+  { id: 'snapchat', name: t('tools.snapchat.name'), path: '/snapchat-qr-code-generator', description: t('tools.snapchat.desc'), icon: CameraIcon, color: 'bg-yellow-400' },
+  { id: 'app-store', name: t('tools.app-store.name'), path: '/app-store-qr-code-generator', description: t('tools.app-store.desc'), icon: ArrowDownOnSquareIcon, color: 'bg-slate-900' },
+  { id: 'google-play', name: t('tools.google-play.name'), path: '/google-play-qr-code-generator', description: t('tools.google-play.desc'), icon: PlayIcon, color: 'bg-green-500' },
+  { id: 'bitcoin', name: t('tools.bitcoin.name'), path: '/bitcoin-qr-code-generator', description: t('tools.bitcoin.desc'), icon: CurrencyDollarIcon, color: 'bg-orange-400' },
+  { id: 'ethereum', name: t('tools.ethereum.name'), path: '/ethereum-qr-code-generator', description: t('tools.ethereum.desc'), icon: ShieldCheckIcon, color: 'bg-indigo-400' },
+  { id: 'event', name: t('tools.event.name'), path: '/event-qr-code-generator', description: t('tools.event.desc'), icon: CalendarIcon, color: 'bg-rose-500' },
+  { id: 'mp3', name: t('tools.mp3.name'), path: '/mp3-qr-code-generator', description: t('tools.mp3.desc'), icon: MusicalNoteIcon, color: 'bg-violet-600' },
+  { id: 'google-reviews', name: t('tools.google-reviews.name'), path: '/google-reviews-qr-code-generator', description: t('tools.google-reviews.desc'), icon: StarIcon, color: 'bg-yellow-500' },
+  { id: 'twitch', name: t('tools.twitch.name'), path: '/twitch-qr-code-generator', description: t('tools.twitch.desc'), icon: TvIcon, color: 'bg-purple-600' },
+  { id: 'reddit', name: t('tools.reddit.name'), path: '/reddit-qr-code-generator', description: t('tools.reddit.desc'), icon: ChatBubbleLeftRightIcon, color: 'bg-orange-600' },
+  { id: 'viber', name: t('tools.viber.name'), path: '/viber-qr-code-generator', description: t('tools.viber.desc'), icon: ChatBubbleLeftIcon, color: 'bg-indigo-500' },
+  { id: 'paypal', name: t('tools.paypal.name'), path: '/paypal-qr-code-generator', description: t('tools.paypal.desc'), icon: CreditCardIcon, color: 'bg-blue-600' },
 ])
 </script>

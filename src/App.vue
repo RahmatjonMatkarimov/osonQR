@@ -13,13 +13,13 @@
           <nav class="hidden sm:flex gap-6 text-sm font-medium text-gray-600">
             <router-link to="/" class="hover:text-brand-600 transition-colors">{{ $t('nav.home') }}</router-link>
             <router-link to="/qr-code-generator" class="hover:text-brand-600 transition-colors">{{ $t('nav.url')
-            }}</router-link>
+              }}</router-link>
             <router-link to="/text-qr-code-generator" class="hover:text-brand-600 transition-colors">{{ $t('nav.text')
-            }}</router-link>
+              }}</router-link>
             <router-link to="/wifi-qr-code-generator" class="hover:text-brand-600 transition-colors">{{ $t('nav.wifi')
-            }}</router-link>
+              }}</router-link>
             <router-link to="/vcard-qr-code-generator" class="hover:text-brand-600 transition-colors">{{ $t('nav.vcard')
-            }}</router-link>
+              }}</router-link>
           </nav>
 
           <select v-model="currentLocale" @change="changeLanguage"
@@ -38,11 +38,11 @@
 
     <footer class="bg-gray-900 justify-self-end mt-auto text-gray-400 py-12 text-sm">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
           <!-- Column 1: Social & Communication -->
           <div>
             <h3 class="text-white text-lg font-bold mb-4">Ijtimoiy Tarmoqlar</h3>
-            <ul class="space-y-2">
+            <ul class="space-y-2 text-xs">
               <li><router-link to="/telegram-qr-code-generator" class="hover:text-brand-500 transition-colors">Telegram
                   QR</router-link></li>
               <li><router-link to="/whatsapp-qr-code-generator" class="hover:text-brand-500 transition-colors">WhatsApp
@@ -55,13 +55,27 @@
                   QR</router-link></li>
               <li><router-link to="/tiktok-qr-code-generator" class="hover:text-brand-500 transition-colors">TikTok
                   QR</router-link></li>
+              <li><router-link to="/twitter-qr-code-generator" class="hover:text-brand-500 transition-colors">Twitter
+                  (X) QR</router-link></li>
+              <li><router-link to="/snapchat-qr-code-generator" class="hover:text-brand-500 transition-colors">Snapchat
+                  QR</router-link></li>
+              <li><router-link to="/pinterest-qr-code-generator"
+                  class="hover:text-brand-500 transition-colors">Pinterest QR</router-link></li>
+              <li><router-link to="/twitch-qr-code-generator" class="hover:text-brand-500 transition-colors">Twitch
+                  QR</router-link></li>
+              <li><router-link to="/reddit-qr-code-generator" class="hover:text-brand-500 transition-colors">Reddit
+                  QR</router-link></li>
+              <li><router-link to="/viber-qr-code-generator" class="hover:text-brand-500 transition-colors">Viber
+                  QR</router-link></li>
+              <li><router-link to="/discord-qr-code-generator" class="hover:text-brand-500 transition-colors">Discord
+                  QR</router-link></li>
             </ul>
           </div>
 
-          <!-- Column 2: Business & Pro Tools -->
+          <!-- Column 2: Apps & Business -->
           <div>
-            <h3 class="text-white text-lg font-bold mb-4">Biznes & Fayllar</h3>
-            <ul class="grid grid-cols-2 gap-x-4 gap-y-2">
+            <h3 class="text-white text-lg font-bold mb-4">Ilovalar & Biznes</h3>
+            <ul class="space-y-2 text-xs">
               <li><router-link to="/qr-code-generator" class="hover:text-brand-500 transition-colors">URL
                   QR</router-link></li>
               <li><router-link to="/wifi-qr-code-generator" class="hover:text-brand-500 transition-colors">WiFi
@@ -69,8 +83,6 @@
               <li><router-link to="/vcard-qr-code-generator" class="hover:text-brand-500 transition-colors">vCard
                   QR</router-link></li>
               <li><router-link to="/pdf-qr-code-generator" class="hover:text-brand-500 transition-colors">PDF
-                  QR</router-link></li>
-              <li><router-link to="/location-qr-code-generator" class="hover:text-brand-500 transition-colors">Xarita
                   QR</router-link></li>
               <li><router-link to="/image-qr-code-generator" class="hover:text-brand-500 transition-colors">Rasm
                   QR</router-link></li>
@@ -82,13 +94,42 @@
                   QR</router-link></li>
               <li><router-link to="/file-download-qr-code-generator" class="hover:text-brand-500 transition-colors">Fayl
                   QR</router-link></li>
+              <li><router-link to="/app-store-qr-code-generator" class="hover:text-brand-500 transition-colors">App
+                  Store QR</router-link></li>
+              <li><router-link to="/google-play-qr-code-generator" class="hover:text-brand-500 transition-colors">Google
+                  Play QR</router-link></li>
             </ul>
           </div>
 
-          <!-- Column 3: Information & SEO -->
+          <!-- Column 3: Payments & Tools -->
+          <div>
+            <h3 class="text-white text-lg font-bold mb-4">To'lovlar & Asboblar</h3>
+            <ul class="space-y-2 text-xs">
+              <li><router-link to="/bitcoin-qr-code-generator" class="hover:text-brand-500 transition-colors">Bitcoin
+                  QR</router-link></li>
+              <li><router-link to="/ethereum-qr-code-generator" class="hover:text-brand-500 transition-colors">Ethereum
+                  QR</router-link></li>
+              <li><router-link to="/paypal-qr-code-generator" class="hover:text-brand-500 transition-colors">PayPal
+                  QR</router-link></li>
+              <li><router-link to="/event-qr-code-generator" class="hover:text-brand-500 transition-colors">Tadbir
+                  QR</router-link></li>
+              <li><router-link to="/google-reviews-qr-code-generator"
+                  class="hover:text-brand-500 transition-colors">Google Reviews QR</router-link></li>
+              <li><router-link to="/mp3-qr-code-generator" class="hover:text-brand-500 transition-colors">MP3 Audio
+                  QR</router-link></li>
+              <li><router-link to="/sms-qr-code-generator" class="hover:text-brand-500 transition-colors">SMS
+                  QR</router-link></li>
+              <li><router-link to="/email-qr-code-generator" class="hover:text-brand-500 transition-colors">Email
+                  QR</router-link></li>
+              <li><router-link to="/location-qr-code-generator" class="hover:text-brand-500 transition-colors">Manzil
+                  QR</router-link></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Information & SEO -->
           <div>
             <h3 class="text-white text-lg font-bold mb-4">Ma'lumotlar</h3>
-            <ul class="space-y-2">
+            <ul class="space-y-2 text-xs">
               <li><router-link to="/qr-kod-nima" class="hover:text-brand-500 transition-colors">QR Kod
                   Nima?</router-link></li>
               <li><router-link to="/qr-kod-qanday-yaratiladi" class="hover:text-brand-500 transition-colors">Qanday
